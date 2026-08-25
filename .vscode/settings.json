@@ -1,0 +1,30 @@
+{
+    // --- Python interpreter ---
+    // Points VS Code at the project's own virtual environment so the correct
+    // version of numpy, scipy, yfinance etc. is always used.
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+    // --- Test runner ---
+    // Enables pytest and tells it where the tests live. After changing this
+    // file, click the Refresh button (↺) in the Testing panel to re-discover.
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestArgs": ["tests"],
+
+    // --- Jupyter ---
+    // The notebook kernel starts in the project root so that Path.cwd()
+    // resolves to the workspace folder, which is where src/ lives.
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+
+    // --- Editor ---
+    // Trim trailing whitespace and insert a final newline on save to keep
+    // git diffs clean.
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // --- Python formatting ---
+    // 88-character line length matches the style used throughout the project.
+    "[python]": {
+        "editor.rulers": [88]
+    }
+}
